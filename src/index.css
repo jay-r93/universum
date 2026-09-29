@@ -932,7 +932,9 @@ input, textarea, select {
   .welcome-line h1 { font-size: 22px; }
   .editor-card { padding: 20px; border-radius: 16px; }
   .topbar { padding: 14px 18px; padding-top: calc(14px + env(safe-area-inset-top)); padding-left: calc(18px + env(safe-area-inset-left)); padding-right: calc(18px + env(safe-area-inset-right)); }
-  .quiet-button:not(.chat-toggle) { display: none; }
+  .quiet-button:not(.chat-toggle):not(.settings-btn) { display: none; }
+  .settings-btn { padding: 8px; gap: 0; }
+  .settings-btn span { display: none; }
   .save-row { flex-wrap: wrap; }
   .chat-bubble { bottom: calc(12px + env(safe-area-inset-bottom)); right: 12px; left: 12px; width: auto; }
   .booklet-modal { max-width: 100%; padding: 24px 18px; }

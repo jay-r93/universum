@@ -8,6 +8,10 @@ if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/sw.js').catch(() => {});
   });
+  // Auto-reload when a new service worker takes over
+  navigator.serviceWorker.addEventListener('message', (event) => {
+    if (event.data?.type === 'SW_UPDATED') window.location.reload();
+  });
 }
 
 // Sync CSS --vh variable with the real dynamic viewport height.
